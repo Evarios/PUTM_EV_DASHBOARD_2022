@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>800</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="SPEED_UI">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(0, 0, 0);</string>
+     </property>
+     <widget class="QWidget" name="SPEED_WIDGET" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>154</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="SPEED_menuBar">
+        <item>
+         <widget class="QLabel" name="SPEED_lv">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+font: 16pt &quot;Comic Sans MS&quot;;
+border: 20px solid-white</string>
+          </property>
+          <property name="text">
+           <string>LV 100%</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="SPEED_hv">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+font: 16pt &quot;Comic Sans MS&quot;;
+border: 20px solid-white</string>
+          </property>
+          <property name="text">
+           <string>HV 100%</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="SPEED_errors">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+font: 16pt &quot;Comic Sans MS&quot;;
+border: 20px solid-white</string>
+          </property>
+          <property name="text">
+           <string>0 ERRORS</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="SPEED_engMode">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+border-color: rgb(255, 255, 255);
+font: 16pt &quot;Comic Sans MS&quot;;
+border: 20px solid-white</string>
+          </property>
+          <property name="text">
+           <string>ENG MODE  
+ -&gt; 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="SPEED_speed">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>120</y>
+         <width>621</width>
+         <height>351</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">font: 150pt &quot;Comic Sans MS&quot;;
+color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>100</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QLabel" name="SPEED_name">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>621</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Comic Sans MS</family>
+         <pointsize>28</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>SUPER DASHBOARD</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="LV_UI">
+     <widget class="QWidget" name="LV_WIDGET" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_3">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>154</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="LV_menuBar">
+        <item>
+         <widget class="QLabel" name="LV_lv">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid green;</string>
+          </property>
+          <property name="text">
+           <string>LV 100%</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="LV_hv">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid red;</string>
+          </property>
+          <property name="text">
+           <string>HV 100%</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="LV_errors">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid red;</string>
+          </property>
+          <property name="text">
+           <string>0 ERRORS</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="LV_engMode">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid red;</string>
+          </property>
+          <property name="text">
+           <string>ENG MODE  
+ -&gt; 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="LV_name">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>621</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Comic Sans MS</family>
+         <pointsize>28</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>PUT MOTORSPORT</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="horizontalLayoutWidget">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>611</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QLabel" name="LV_charge">
+          <property name="styleSheet">
+           <string notr="true">font: 22pt &quot;Arial&quot;;
+color: rgb(255, 255, 255);
+border: 3px solid blue;</string>
+          </property>
+          <property name="text">
+           <string>Charge level: 
+ 69%</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::AutoText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="LV_voltage">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>26</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 26pt &quot;Arial&quot;;
+border: 3px solid blue;</string>
+          </property>
+          <property name="text">
+           <string>Voltage: 
+ 22,4V</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="LV_temp">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 26pt &quot;Arial&quot;;
+border: 3px solid blue;</string>
+          </property>
+          <property name="text">
+           <string>Temperature: 
+ 20,3°</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="HV_UI">
+     <widget class="QWidget" name="HV_WIDGET" native="true">
+      <property name="geometry">
+       <rect>
+        <x>30</x>
+        <y>20</y>
+        <width>800</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <widget class="QWidget" name="verticalLayoutWidget_4">
+       <property name="geometry">
+        <rect>
+         <x>630</x>
+         <y>10</y>
+         <width>154</width>
+         <height>461</height>
+        </rect>
+       </property>
+       <layout class="QVBoxLayout" name="HV_menuBar">
+        <item>
+         <widget class="QLabel" name="HV_lv">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid red;</string>
+          </property>
+          <property name="text">
+           <string>LV 100%</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="HV_hv">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid green;</string>
+          </property>
+          <property name="text">
+           <string>HV 100%</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="HV_errors">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid red;</string>
+          </property>
+          <property name="text">
+           <string>0 ERRORS</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="HV_engMode">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid red;</string>
+          </property>
+          <property name="text">
+           <string>ENG MODE  
+ -&gt; 1</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QLabel" name="HV_name">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>20</y>
+         <width>621</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Comic Sans MS</family>
+         <pointsize>28</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>PUT MOTORSPORT</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QWidget" name="horizontalLayoutWidget_2">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>170</y>
+         <width>611</width>
+         <height>151</height>
+        </rect>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QLabel" name="HV_charge">
+          <property name="styleSheet">
+           <string notr="true">font: 22pt &quot;Arial&quot;;
+color: rgb(255, 255, 255);
+border: 3px solid blue;</string>
+          </property>
+          <property name="text">
+           <string>Charge level: 
+ 69%</string>
+          </property>
+          <property name="textFormat">
+           <enum>Qt::AutoText</enum>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="HV_voltage">
+          <property name="font">
+           <font>
+            <family>Arial</family>
+            <pointsize>26</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 26pt &quot;Arial&quot;;
+border: 3px solid blue;</string>
+          </property>
+          <property name="text">
+           <string>Voltage: 
+ 420,69V</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="HV_temp">
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);
+font: 26pt &quot;Arial&quot;;
+border: 3px solid blue;</string>
+          </property>
+          <property name="text">
+           <string>Temperature: 
+ 21,37°</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
