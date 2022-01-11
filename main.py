@@ -1,12 +1,15 @@
 from PyQt5 import QtWidgets, uic, QtCore
 from PyQt5.QtGui import QFont
+from PyQt5.Qt import Qt
 import sys
 
 class Ui(QtWidgets.QMainWindow):
     currentSpeed = 0
+    currentPage = 4
     def __init__(self):
         super(Ui, self).__init__()       
         uic.loadUi('main.ui', self)
+        self.stackedWidget.setCurrentIndex(0)
         self.timer = QtCore.QTimer(self)
         self.timer.setInterval(30)
         self.timer.timeout.connect(self.update)        
@@ -14,7 +17,7 @@ class Ui(QtWidgets.QMainWindow):
     def update(self):
         self.currentSpeed += 1
         if self.currentSpeed <= 250:
-            self.SPEED.setText(str(self.currentSpeed))
+            self.SPEED_speed.setText(str(self.currentSpeed))
         else:
             self.currentSpeed = 0
         
@@ -23,6 +26,21 @@ class Ui(QtWidgets.QMainWindow):
 
     def stop(self):
         self.timer.stop()
+
+    def keyPressEvent(self, event):
+        if event.key() == Qt.Key_Down:
+            self.currentPage += 1
+            if self.currentPage == 5:
+                self.currentPage = 0
+            self.stackedWidget.setCurrentIndex(self.currentPage)
+        if event.key() == Qt.Key_Up:
+            self.currentPage -= 1
+            if self.currentPage == -1:
+                self.currentPage = 4
+            self.stackedWidget.setCurrentIndex(self.currentPage)
+        
+
+
 
 
 if __name__ == "__main__":
