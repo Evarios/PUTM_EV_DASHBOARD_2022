@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>803</width>
+    <width>859</width>
     <height>479</height>
    </rect>
   </property>
@@ -19,12 +19,12 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>800</width>
+      <width>641</width>
       <height>480</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="SPEED_UI">
      <property name="styleSheet">
@@ -39,67 +39,6 @@
         <height>480</height>
        </rect>
       </property>
-      <widget class="QWidget" name="verticalLayoutWidget_2">
-       <property name="geometry">
-        <rect>
-         <x>630</x>
-         <y>10</y>
-         <width>154</width>
-         <height>461</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="SPEED_menuBar">
-        <item>
-         <widget class="QLabel" name="SPEED_lv">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>LV 100%</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="SPEED_hv">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>HV 100%</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="SPEED_errors">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>0 ERRORS</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="SPEED_engMode">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>ENG MODE  
- -&gt; 1</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
       <widget class="QLabel" name="SPEED_speed">
        <property name="geometry">
         <rect>
@@ -160,67 +99,6 @@ color: rgb(255, 255, 255);</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(0, 0, 0);</string>
       </property>
-      <widget class="QWidget" name="verticalLayoutWidget_3">
-       <property name="geometry">
-        <rect>
-         <x>630</x>
-         <y>10</y>
-         <width>154</width>
-         <height>461</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="LV_menuBar">
-        <item>
-         <widget class="QLabel" name="LV_lv">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid green;</string>
-          </property>
-          <property name="text">
-           <string>LV 100%</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="LV_hv">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>HV 100%</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="LV_errors">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>0 ERRORS</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="LV_engMode">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>ENG MODE  
- -&gt; 1</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
       <widget class="QLabel" name="LV_name">
        <property name="geometry">
         <rect>
@@ -333,67 +211,6 @@ border: 3px solid blue;</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(0, 0, 0);</string>
       </property>
-      <widget class="QWidget" name="verticalLayoutWidget_4">
-       <property name="geometry">
-        <rect>
-         <x>630</x>
-         <y>10</y>
-         <width>154</width>
-         <height>461</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="HV_menuBar">
-        <item>
-         <widget class="QLabel" name="HV_lv">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>LV 100%</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="HV_hv">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid green;</string>
-          </property>
-          <property name="text">
-           <string>HV 100%</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="HV_errors">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>0 ERRORS</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="HV_engMode">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>ENG MODE  
- -&gt; 1</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
       <widget class="QLabel" name="HV_name">
        <property name="geometry">
         <rect>
@@ -506,67 +323,6 @@ border: 3px solid blue;</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(0, 0, 0);</string>
       </property>
-      <widget class="QWidget" name="verticalLayoutWidget_5">
-       <property name="geometry">
-        <rect>
-         <x>630</x>
-         <y>10</y>
-         <width>154</width>
-         <height>461</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="ERRORS_menuBar">
-        <item>
-         <widget class="QLabel" name="ERRORS_lv">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>LV 100%</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="ERRORS_hv">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>HV 100%</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="ERRORS_errors">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid green;</string>
-          </property>
-          <property name="text">
-           <string>0 ERRORS</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="ERRORS_engMode">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>ENG MODE  
- -&gt; 1</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
       <widget class="QLabel" name="ERRORS_name">
        <property name="geometry">
         <rect>
@@ -634,7 +390,7 @@ PM08 działa bezbłędnie</string>
       </widget>
      </widget>
     </widget>
-    <widget class="QWidget" name="page">
+    <widget class="QWidget" name="ENGMODE_UI">
      <widget class="QWidget" name="ENGMODE_WIDGET" native="true">
       <property name="geometry">
        <rect>
@@ -647,67 +403,6 @@ PM08 działa bezbłędnie</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(0, 0, 0);</string>
       </property>
-      <widget class="QWidget" name="verticalLayoutWidget_6">
-       <property name="geometry">
-        <rect>
-         <x>630</x>
-         <y>10</y>
-         <width>154</width>
-         <height>461</height>
-        </rect>
-       </property>
-       <layout class="QVBoxLayout" name="ERRORS_menuBar_2">
-        <item>
-         <widget class="QLabel" name="ERRORS_lv_2">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>LV 100%</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="ERRORS_hv_2">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>HV 100%</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="ERRORS_errors_2">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid red;</string>
-          </property>
-          <property name="text">
-           <string>0 ERRORS</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="ERRORS_engMode_2">
-          <property name="styleSheet">
-           <string notr="true">color: rgb(255, 255, 255);
-font: 16pt &quot;Arial&quot;;
-border: 3px solid green;</string>
-          </property>
-          <property name="text">
-           <string>ENG MODE  
- -&gt; 1</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
       <widget class="QLabel" name="ENGMODE_name">
        <property name="geometry">
         <rect>
@@ -748,8 +443,7 @@ color: rgb(255, 255, 255);
 border: 3px solid blue;</string>
        </property>
        <property name="text">
-        <string>Engine mode: 
-Full pizda max daj kurwie miodu</string>
+        <string>Engine mode: 1 (100% power)</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -758,6 +452,94 @@ Full pizda max daj kurwie miodu</string>
      </widget>
     </widget>
    </widget>
+   <widget class="QWidget" name="menuWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>820</width>
+      <height>480</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(0, 0, 0);</string>
+    </property>
+    <widget class="QWidget" name="verticalLayoutWidget_7">
+     <property name="geometry">
+      <rect>
+       <x>650</x>
+       <y>10</y>
+       <width>154</width>
+       <height>461</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="menuBar">
+      <item>
+       <widget class="QLabel" name="MENU_speed">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid green;</string>
+        </property>
+        <property name="text">
+         <string>SPEED</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="MENU_lv">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid red;</string>
+        </property>
+        <property name="text">
+         <string>LV 100%</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="MENU_hv">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid red;</string>
+        </property>
+        <property name="text">
+         <string>HV 100%</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="MENU_errors">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid red;</string>
+        </property>
+        <property name="text">
+         <string>0 ERRORS</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="MENU_engMode">
+        <property name="styleSheet">
+         <string notr="true">color: rgb(255, 255, 255);
+font: 16pt &quot;Arial&quot;;
+border: 3px solid red;</string>
+        </property>
+        <property name="text">
+         <string>ENG MODE  
+ -&gt; 1</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <zorder>menuWidget</zorder>
+   <zorder>stackedWidget</zorder>
   </widget>
  </widget>
  <resources/>
