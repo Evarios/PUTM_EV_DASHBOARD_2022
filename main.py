@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets, uic, QtCore
+from PyQt5 import QtWidgets, uic, QtCore, QtSerialPort
 from PyQt5.QtGui import QFont
 from PyQt5.Qt import Qt
 import sys
@@ -8,14 +8,31 @@ from styles import *
 class Ui(QtWidgets.QMainWindow):
     currentSpeed = 0
     currentPage = 0
+    output_te = ""
     def __init__(self):
         super(Ui, self).__init__()       
         uic.loadUi('main.ui', self)
         self.stackedWidget.setCurrentIndex(0)
         self.timer = QtCore.QTimer(self)
         self.timer.setInterval(30)
-        self.timer.timeout.connect(self.update)        
-    
+        self.timer.timeout.connect(self.update)
+        #serial port configuration
+        self.serial = QtSerialPort.QSerialPort(
+            'COM4',
+            baudRate=QtSerialPort.QSerialPort.Baud9600,
+            readyRead=self.receive
+        )
+        self.serial.close()
+        self.serial.open(QtCore.QIODevice.ReadWrite)
+
+    @QtCore.pyqtSlot()
+    def receive(self):
+        while self.serial.canReadLine():
+            text = self.serial.readLine().data().decode()
+            text = text.rstrip('\r\n')
+            print(text)
+
+
     def update(self):
         self.currentSpeed += 1
         if self.currentSpeed <= 250:
