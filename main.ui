@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>3</number>
     </property>
     <widget class="QWidget" name="SPEED_UI">
      <property name="styleSheet">
@@ -382,7 +382,7 @@ border: 3px solid blue;</string>
        </property>
        <property name="text">
         <string>Errors list: 
-PM08 działa bezbłędnie</string>
+No errors</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -428,7 +428,7 @@ PM08 działa bezbłędnie</string>
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="label_4">
+      <widget class="QLabel" name="ENGMODE_mode">
        <property name="geometry">
         <rect>
          <x>16</x>
