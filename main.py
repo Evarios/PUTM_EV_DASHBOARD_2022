@@ -1,4 +1,4 @@
-from PyQt5 import QtWidgets, uic, QtCore, QtSerialPort
+from PyQt5 import QtWidgets, uic, QtCore#, QtSerialPort
 from PyQt5.QtGui import QFont
 from PyQt5.Qt import Qt
 from messageHandler import handle_messsage
@@ -19,13 +19,13 @@ class Ui(QtWidgets.QMainWindow):
         self.timer.setInterval(30)
         self.timer.timeout.connect(self.update)
         #serial port configuration
-        self.serial = QtSerialPort.QSerialPort(
-            'COM4',
-            baudRate=QtSerialPort.QSerialPort.Baud9600,
-            readyRead=self.receive
-        )
-        self.serial.close()
-        self.serial.open(QtCore.QIODevice.ReadWrite)
+        # self.serial = QtSerialPort.QSerialPort(
+        #     'COM4',
+        #     baudRate=QtSerialPort.QSerialPort.Baud9600,
+        #     readyRead=self.receive
+        # )
+        # self.serial.close()
+        # self.serial.open(QtCore.QIODevice.ReadWrite)
 
     @QtCore.pyqtSlot()
     def receive(self):
@@ -38,25 +38,25 @@ class Ui(QtWidgets.QMainWindow):
 
     def update(self):
         #updating speed
-        self.SPEED_speed.setText(str(values.speed))
-        self.MENU_speed.setText("SPEED: " + str(values.speed))
+        self.SPEED_speed.setText(str(values.valuesDict["speed"]))
+        self.MENU_speed.setText("SPEED: " + str(values.valuesDict["speed"]))
         #updating LV values
-        self.MENU_lv.setText("LV " + str(values.lv_charge_percent) + "%")
-        self.LV_charge.setText("Charge level:\n" + str(values.lv_charge_percent) + "%")
-        self.LV_voltage.setText("Voltage:\n" + str(values.lv_voltage) + "V")
-        self.LV_temp.setText("Temerature:\n" + str(values.lv_avg_temp)+ "°C")
+        self.MENU_lv.setText("LV " + str(values.valuesDict["lv_charge_percent"]) + "%")
+        self.LV_charge.setText("Charge level:\n" + str(values.valuesDict["lv_charge_percent"]) + "%")
+        self.LV_voltage.setText("Voltage:\n" + str(values.valuesDict["lv_voltage"]) + "V")
+        self.LV_temp.setText("Temerature:\n" + str(values.valuesDict["lv_avg_temp"])+ "°C")
         
         #updating HV values
-        self.MENU_hv.setText("HV " + str(values.hv_charge_percent) + "%")
-        self.HV_charge.setText("Charge level:\n" + str(values.hv_charge_percent) + "%")
-        self.HV_voltage.setText("Voltage:\n" + str(values.hv_voltage) + "V")
-        self.HV_temp.setText("Temerature:\n" + str(values.hv_avg_temp)+ "°C")
+        self.MENU_hv.setText("HV " + str(values.valuesDict["hv_charge_percent"]) + "%")
+        self.HV_charge.setText("Charge level:\n" + str(values.valuesDict["hv_charge_percent"]) + "%")
+        self.HV_voltage.setText("Voltage:\n" + str(values.valuesDict["hv_voltage"]) + "V")
+        self.HV_temp.setText("Temerature:\n" + str(values.valuesDict["hv_avg_temp"])+ "°C")
 
         #updating engine mode
-        self.MENU_engMode.setText("ENG_MODE\n -> " + str(values.engine_mode))
-        if values.engine_mode == 1:
+        self.MENU_engMode.setText("ENG_MODE\n -> " + str(values.valuesDict["engine_mode"]))
+        if values.valuesDict["engine_mode"] == 1:
             self.ENGMODE_mode.setText("Engine mode: 1 (100% power)")
-        elif values.engine_mode == 2:
+        elif values.valuesDict["engine_mode"] == 2:
             self.ENGMODE_mode.setText("Engine mode: 2 (90% power)")
         
     def start(self):
