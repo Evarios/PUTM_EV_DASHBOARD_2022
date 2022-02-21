@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="SPEED_UI">
      <property name="styleSheet">
@@ -48,9 +48,17 @@
          <height>351</height>
         </rect>
        </property>
+       <property name="font">
+        <font>
+         <family>Arial Black</family>
+         <pointsize>150</pointsize>
+         <weight>75</weight>
+         <italic>false</italic>
+         <bold>true</bold>
+        </font>
+       </property>
        <property name="styleSheet">
-        <string notr="true">font: 150pt &quot;Comic Sans MS&quot;;
-color: rgb(255, 255, 255);</string>
+        <string notr="true">color: rgb(255, 255, 255);</string>
        </property>
        <property name="text">
         <string>100</string>
@@ -70,8 +78,10 @@ color: rgb(255, 255, 255);</string>
        </property>
        <property name="font">
         <font>
-         <family>Comic Sans MS</family>
+         <family>Arial Black</family>
          <pointsize>28</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
         </font>
        </property>
        <property name="styleSheet">
