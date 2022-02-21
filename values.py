@@ -14,4 +14,8 @@ def init():
         "lv_min_temp": 0,
         "engine_mode": 0
     }
+    global canDict
+    canDict = {
+        "0x01":0 #speed
+    }
 

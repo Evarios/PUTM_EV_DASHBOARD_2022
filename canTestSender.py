@@ -1,5 +1,5 @@
 import can
-
+from time import sleep
 def startSending():
     bus = can.interface.Bus(bustype='socketcan', channel='vcan0', bitrate=1000000)
     x = 0
@@ -9,5 +9,6 @@ def startSending():
         x+=1
         if(x== 200):
             x = 0
+        sleep(0.01)
 if __name__ == "__main__":
     startSending()

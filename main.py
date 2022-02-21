@@ -1,9 +1,10 @@
 from PyQt5 import QtWidgets, uic, QtCore#, QtSerialPort
 from PyQt5.QtGui import QFont
 from PyQt5.Qt import Qt
-from messageHandler import handle_messsage
+from canHandler import startReceiving
 import sys
 import values
+import threading
 
 from styles import *
 
@@ -18,27 +19,10 @@ class Ui(QtWidgets.QMainWindow):
         self.timer = QtCore.QTimer(self)
         self.timer.setInterval(30)
         self.timer.timeout.connect(self.update)
-        #serial port configuration
-        # self.serial = QtSerialPort.QSerialPort(
-        #     'COM4',
-        #     baudRate=QtSerialPort.QSerialPort.Baud9600,
-        #     readyRead=self.receive
-        # )
-        # self.serial.close()
-        # self.serial.open(QtCore.QIODevice.ReadWrite)
-
-    @QtCore.pyqtSlot()
-    def receive(self):
-        while self.serial.canReadLine():
-            text = self.serial.readLine().data().decode()
-            text = text.rstrip('\r\n')
-            print(text)
-            handle_messsage(text)
-
 
     def update(self):
         #updating speed
-        self.SPEED_speed.setText(str(values.valuesDict["speed"]))
+        self.SPEED_speed.setText(str(values.canDict["0x1"]))
         self.MENU_speed.setText("SPEED: " + str(values.valuesDict["speed"]))
         #updating LV values
         self.MENU_lv.setText("LV " + str(values.valuesDict["lv_charge_percent"]) + "%")
@@ -58,6 +42,7 @@ class Ui(QtWidgets.QMainWindow):
             self.ENGMODE_mode.setText("Engine mode: 1 (100% power)")
         elif values.valuesDict["engine_mode"] == 2:
             self.ENGMODE_mode.setText("Engine mode: 2 (90% power)")
+        #print(values.canDict)
         
     def start(self):
         self.timer.start()
@@ -86,6 +71,8 @@ class Ui(QtWidgets.QMainWindow):
 
 
 if __name__ == "__main__":
+    canHandlerThread = threading.Thread(target=startReceiving)
+    canHandlerThread.start()
     values.init()
     app = QtWidgets.QApplication(sys.argv)
     window = Ui()
