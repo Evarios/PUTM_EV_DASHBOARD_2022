@@ -16,6 +16,14 @@ def init():
     }
     global canDict
     canDict = {
-        "0x01":0 #speed
+        "0x1":0 #speed
     }
+    global DV_MISSIONS
+    DV_MISSIONS = [
+        "ACCELERETION",
+        "SKIDPAD",
+        "EBS TEST",
+        "INSPECTION",
+        "MANUAL DRIVING"
+    ]
 

@@ -11,3 +11,6 @@ def startReceiving():
 
 def update_value(id, value):
     values.canDict[id] = value
+
+def send_mission():
+    pass

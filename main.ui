@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>5</number>
     </property>
     <widget class="QWidget" name="SPEED_UI">
      <property name="styleSheet">
@@ -67,31 +67,20 @@
         <set>Qt::AlignCenter</set>
        </property>
       </widget>
-      <widget class="QLabel" name="SPEED_name">
+      <widget class="QProgressBar" name="SPEED_bar">
        <property name="geometry">
         <rect>
-         <x>0</x>
-         <y>20</y>
-         <width>621</width>
-         <height>71</height>
+         <x>50</x>
+         <y>40</y>
+         <width>571</width>
+         <height>41</height>
         </rect>
        </property>
-       <property name="font">
-        <font>
-         <family>Arial Black</family>
-         <pointsize>28</pointsize>
-         <weight>75</weight>
-         <bold>true</bold>
-        </font>
+       <property name="maximum">
+        <number>150</number>
        </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string>PUT MOTORSPORT</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
+       <property name="value">
+        <number>0</number>
        </property>
       </widget>
      </widget>
@@ -413,31 +402,6 @@ No errors</string>
       <property name="styleSheet">
        <string notr="true">background-color: rgb(0, 0, 0);</string>
       </property>
-      <widget class="QLabel" name="ENGMODE_name">
-       <property name="geometry">
-        <rect>
-         <x>0</x>
-         <y>20</y>
-         <width>621</width>
-         <height>71</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Comic Sans MS</family>
-         <pointsize>28</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
-       </property>
-       <property name="text">
-        <string>PUT MOTORSPORT</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
       <widget class="QLabel" name="ENGMODE_mode">
        <property name="geometry">
         <rect>
@@ -457,6 +421,68 @@ border: 3px solid blue;</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="DV_UI">
+     <widget class="QWidget" name="DV_WIDGET" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>800</width>
+        <height>480</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 0, 0);</string>
+      </property>
+      <widget class="QLabel" name="DV_mission">
+       <property name="geometry">
+        <rect>
+         <x>210</x>
+         <y>130</y>
+         <width>251</width>
+         <height>71</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>22</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Selected mission:</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="DV_current_mission">
+       <property name="geometry">
+        <rect>
+         <x>130</x>
+         <y>210</y>
+         <width>381</width>
+         <height>61</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Arial</family>
+         <pointsize>22</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: rgb(255, 255, 255);</string>
+       </property>
+       <property name="text">
+        <string>Acceleration</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
      </widget>
