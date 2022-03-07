@@ -23,8 +23,8 @@ class Ui(QtWidgets.QMainWindow):
 
     def update(self):
         #updating speed
-        #self.SPEED_speed.setText(str(values.canDict["0x1"]))
-        self.MENU_speed.setText("SPEED: " + str(values.valuesDict["speed"]))
+        self.SPEED_speed.setText(str(values.canDict["0x1"]))
+        self.MENU_speed.setText("SPEED: " + str(values.canDict["0x1"]))
         self.SPEED_bar.setValue(values.canDict["0x1"])
         #updating LV values
         self.MENU_lv.setText("LV " + str(values.valuesDict["lv_charge_percent"]) + "%")
