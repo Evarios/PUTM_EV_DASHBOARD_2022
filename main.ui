@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>5</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="SPEED_UI">
      <property name="styleSheet">
@@ -76,11 +76,17 @@
          <height>41</height>
         </rect>
        </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #FFFFFF;</string>
+       </property>
        <property name="maximum">
         <number>150</number>
        </property>
        <property name="value">
         <number>0</number>
+       </property>
+       <property name="textVisible">
+        <bool>false</bool>
        </property>
       </widget>
      </widget>
