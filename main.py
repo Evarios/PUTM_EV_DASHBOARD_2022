@@ -4,7 +4,6 @@ from PyQt5.Qt import Qt
 from canHandler import *
 import sys
 import values
-import threading
 
 from styles import *
 
@@ -13,7 +12,8 @@ class Ui(QtWidgets.QMainWindow):
     currentPage = 0
     DVState = False
     output_te = ""
-    def __init__(self):
+    def __init__(self, canHandler):
+        self.canHandler = canHandler
         super(Ui, self).__init__()       
         uic.loadUi('main.ui', self)
         self.stackedWidget.setCurrentIndex(0)
@@ -63,7 +63,7 @@ class Ui(QtWidgets.QMainWindow):
                 self.menuBar.itemAt(self.currentPage).widget().setStyleSheet(ACTIVE)
                 self.stackedWidget.setCurrentIndex(self.currentPage)
             else:
-                send_mission()
+                canHandler.send_mission()
         elif event.key() == Qt.Key_Up:
             if self.DVState == False:
                 self.menuBar.itemAt(self.currentPage).widget().setStyleSheet(DEACTIVE)
@@ -98,11 +98,11 @@ class Ui(QtWidgets.QMainWindow):
             
 
 if __name__ == "__main__":
-    canHandlerThread = threading.Thread(target=startReceiving)
-    canHandlerThread.start()
     values.init()
+    canHandler = CanHandler()
+    canHandler.start_receiving()
     app = QtWidgets.QApplication(sys.argv)
-    window = Ui()
+    window = Ui(canHandler)
     window.show()
     window.start()
     app.exec_()

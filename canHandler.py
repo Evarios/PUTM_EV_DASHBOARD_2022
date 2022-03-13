@@ -1,16 +1,31 @@
 import can
 import values
-def startReceiving():
-    bus = can.interface.Bus(bustype='socketcan', channel='vcan0', bitrate=1000000)
-    msg = can.Message()
-    byteList = []
-    while True:
-        msg = bus.recv()
-        byteList=list(msg.data)
-        update_value(hex(msg.arbitration_id), byteList[7])
+import threading
 
-def update_value(id, value):
-    values.canDict[id] = value
+class CanHandler:
+    
+    bus = None
+    
+    def __init__(self):
+        self.bus = can.interface.Bus(bustype='socketcan', channel='vcan0', bitrate=1000000)
+    
+    def receive_data(self):
+        msg = can.Message()
+        byteList = []
+        while True:
+            msg = self.bus.recv()
+            byteList=list(msg.data)
+            self.update_value(hex(msg.arbitration_id), byteList[7])
+            print(msg)
+    
+    def update_value(self, id, value):
+        values.canDict[id] = value
 
-def send_mission():
-    pass
+    def send_mission(self):
+        pass
+    
+    def start_receiving(self):
+        canHandlerThread = threading.Thread(target=self.receive_data)
+        canHandlerThread.start()
+
+
